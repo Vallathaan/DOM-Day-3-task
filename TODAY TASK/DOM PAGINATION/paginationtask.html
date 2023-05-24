@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DOM Pagination Task</title>
+    <link rel="stylesheet" type="text/css" href="./style.css">
+    <script src="https://app.zenclass.in/sheets/v1/js/zen/suite/bundle.js"></script>
+
+</head>
+<body>
+    <div id="pagination-container"></div>
+</body>
+<script>
+    let paginationContainer = document.getElementById('pagination-container');
+    let totalPages = 20; 
+    let paginationList = document.createElement('ul');
+    paginationList.classList.add('pagination');
+    for (let i = 1; i <= totalPages; i++) {
+      let listItem = document.createElement('li');
+      let link = document.createElement('a');
+      link.href = '#';
+      link.textContent = i;
+      listItem.appendChild(link);
+      paginationList.appendChild(listItem);
+    }
+    paginationList.addEventListener('click', function(event) {
+      var clickedElement = event.target;
+      if (clickedElement.tagName === 'A') {
+        var activePage = document.querySelector('.pagination li a.active');
+        if (activePage) {
+          activePage.classList.remove('active');
+        }
+        clickedElement.classList.add('active');
+      }
+    });
+    paginationContainer.appendChild(paginationList);
+</script>
+</html>

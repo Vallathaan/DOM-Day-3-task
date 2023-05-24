@@ -1,0 +1,9 @@
+.calculator {
+    width: 300px;
+    border: 1px solid #ccc;
+    padding: 10px;
+  }
+  
+  #result {
+    margin-bottom: 10px;
+  }

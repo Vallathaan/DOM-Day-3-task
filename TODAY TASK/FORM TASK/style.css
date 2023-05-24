@@ -1,0 +1,40 @@
+  
+  form {
+    margin-bottom: 20px;
+  }
+
+  form label {
+    display: block;
+    margin-bottom: 5px;
+    font-weight: bold;
+  }
+
+  form input[type="text"],
+  form select {
+    width: 100%;
+    padding: 8px;
+    margin-bottom: 10px;
+  }
+
+  form input[type="submit"] {
+    width: auto;
+    padding: 8px 16px;
+    background-color: blue;
+    color: white;
+    border: none;
+    cursor: pointer;
+  }
+
+  
+  table {
+    width: 100%;
+    border-collapse: collapse;
+  }
+
+  table th,
+  table td {
+    padding: 8px;
+    text-align: left;
+    border-bottom: 1px solid grey;
+  }
+
